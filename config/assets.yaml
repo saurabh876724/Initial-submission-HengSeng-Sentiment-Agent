@@ -1,0 +1,92 @@
+# Asset universe — edit this file to change which assets are analyzed.
+# No asset identifiers are hardcoded elsewhere in the application.
+
+social_lookback_days: 10
+history_years: 3
+
+exchanges:
+  HKEX:
+    name: Hong Kong Stock Exchange
+    country: HK
+    currency: HKD
+    calendar: XHKG
+    timezone: Asia/Hong_Kong
+  KRX:
+    name: Korea Exchange
+    country: KR
+    currency: KRW
+    calendar: XKRX
+    timezone: Asia/Seoul
+
+assets:
+  # ---------------- HKEX ----------------
+  - ticker: 0700.HK
+    company_name: Tencent Holdings
+    local_name: 騰訊控股
+    exchange: HKEX
+    naver_code: null
+    search_keywords: ["騰訊", "騰訊控股", "0700", "Tencent"]
+  - ticker: 9988.HK
+    company_name: Alibaba Group
+    local_name: 阿里巴巴
+    exchange: HKEX
+    naver_code: null
+    search_keywords: ["阿里巴巴", "阿里", "9988", "Alibaba", "BABA"]
+  - ticker: 3690.HK
+    company_name: Meituan
+    local_name: 美團
+    exchange: HKEX
+    naver_code: null
+    search_keywords: ["美團", "3690", "Meituan"]
+  - ticker: 0005.HK
+    company_name: HSBC Holdings
+    local_name: 滙豐控股
+    exchange: HKEX
+    naver_code: null
+    search_keywords: ["滙豐", "匯豐", "0005", "HSBC"]
+  - ticker: 1810.HK
+    company_name: Xiaomi Corporation
+    local_name: 小米集團
+    exchange: HKEX
+    naver_code: null
+    search_keywords: ["小米", "1810", "Xiaomi"]
+
+  # ---------------- KRX ----------------
+  - ticker: 005930.KS
+    company_name: Samsung Electronics
+    local_name: 삼성전자
+    exchange: KRX
+    naver_code: "005930"
+    search_keywords: ["삼성전자", "삼성", "005930", "Samsung Electronics"]
+  - ticker: 000660.KS
+    company_name: SK Hynix
+    local_name: SK하이닉스
+    exchange: KRX
+    naver_code: "000660"
+    search_keywords: ["SK하이닉스", "하이닉스", "000660", "SK Hynix"]
+  - ticker: 005380.KS
+    company_name: Hyundai Motor
+    local_name: 현대차
+    exchange: KRX
+    naver_code: "005380"
+    search_keywords: ["현대차", "현대자동차", "005380", "Hyundai Motor"]
+  - ticker: 373220.KS
+    company_name: LG Energy Solution
+    local_name: LG에너지솔루션
+    exchange: KRX
+    naver_code: "373220"
+    search_keywords: ["LG에너지솔루션", "373220", "LG Energy Solution"]
+  - ticker: 035420.KS
+    company_name: NAVER Corporation
+    local_name: 네이버
+    exchange: KRX
+    naver_code: "035420"
+    search_keywords: ["네이버", "035420", "NAVER"]
+
+# Apify actors verified against the public Apify store on 2026-11-11.
+# See docs in README ("Apify actors") for verification details and caveats.
+apify_actors:
+  lihkg: claude_code_reviewer~lihkg-scraper-en
+  telegram: george.the.developer~telegram-channel-scraper
+  naver_stock_discussion: hgservices~naver-stock-discussion-scraper
+  daum_search: rainminer~daum-search-scraper

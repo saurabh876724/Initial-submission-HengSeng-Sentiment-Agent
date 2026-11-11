@@ -1,0 +1,35 @@
+# Environment / secrets
+.env
+*.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Data artifacts (reproducible; do not commit)
+data/raw/*
+data/processed/*
+data/historical_prices/*
+data/database/*
+!data/**/.gitkeep
+
+# Models & reports (generated)
+models/*
+reports/*
+!models/.gitkeep
+!reports/.gitkeep
+
+# HuggingFace cache
+.cache/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
